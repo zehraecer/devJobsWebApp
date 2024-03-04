@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+a{text-decoration: none;}
+
+body{
+    background-color: #F4F6F8;
+    background-image: url("../img/background-image.png");
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    /* background-position: center; */
+    font-family: Kumbh Sans;
+
+    
+}
+
+
+.container{
+    max-width: 1110px;
+    margin-inline: auto;
+}
+.header{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.modes{
+    display: flex;
+    gap: 16px;
+}
+input[type="range"]{
+    width: 48px;
+    height: 24px;
+    appearance: none; 
+    border-radius: 13px;
+    background-color:#fff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px; 
+    border-radius: 50%;
+    cursor: pointer;
+    background:#5964E0;
+
+}
+input[type="text"]{
+    border: none;
+    width: 271px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #19202D;
+    opacity: 50%;
+        
+  }
+
+input[type="text"]:focus{
+    outline: none;
+}
+.searchForm{
+      
+    margin-top: 44px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px;
+
+
+    div{
+        display: flex;
+        gap: 16px;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+}
+.searchFormleft{
+    margin-left: 32px;
+
+    img{
+        width: 24px;
+        height: 24px;
+        margin-top: 15px;
+    }
+}
+.searchFormMiddle{
+    padding-left: 23px;
+    border-right: 1px solid rgba(110, 128, 152, 0.3);
+    border-left: 1px solid rgba(110, 128, 152, 0.3);
+    img{
+        width: 17px;
+        height: 24px;
+        margin-top: 14px;
+    }
+
+}
+.btn{
+    padding: 16px 36px;
+    color: #fff;
+    background-color: #5964E0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 16px;
+    cursor: pointer;
+    border: none;
+
+
+}
+.searchFormRight{
+    
+
+    input{
+        width: 24px;
+        height: 24px;
+        margin-top: 15px;
+    }
+    h5{
+        margin-top: 17px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+
+    }
+}
+
+
+.hero-container{
+    margin-top: 105px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+
+.hero{
+    margin-top: 65px;
+    position: relative;
+
+    img{
+        position: absolute;
+        bottom: 220px;
+        left: 32px;
+    }
+}
+.hero-box{
+    max-width:350px;
+    padding: 49px 32px 32px 32px;
+    background-color: #fff;
+    border-radius: 6px;
+
+
+    
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: #6E8098;
+
+        }
+
+        h3{
+            width: 350px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+            margin-top: 13px;
+        }
+        h4{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: left;
+            margin-top: 14px;
+            color: #6E8098;
+
+        }
+        h6{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 17px;
+            letter-spacing: 0px;
+            text-align: left;
+            margin-top: 44px;
+            color: #5964E0;
+        }
+}
+
+.btn-loadMore{
+    margin-inline: auto;
+    margin-top: 56px;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.deneme{
+    background-color: #19202D;
+}
