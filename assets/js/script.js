@@ -1,5 +1,7 @@
 const heroContainer = document.querySelector(".hero-container")
 
+const formContainerHero = document.querySelector(".form-container-hero")
+
 
 async function getFetch(){
     const response = await fetch("assets/json/data.json")
@@ -42,16 +44,28 @@ async function showDetail(){
     const details = document.querySelectorAll(".showDetail")
     for (const detail of details) {
         detail.addEventListener("click",async function(){
+            formContainerHero.innerHTML=""
             const id = this.parentElement.parentElement.dataset.id
-            console.log(id);
+            // console.log(id);
             const dataId = await getFetch()
-            console.log(dataId[id]);
-            // for (const dataid of dataId) {
-            //     console.log(dataid);
-            // }
-            console.log(dataId[0].id);
-            const filterData = dataId.find(data => data.id === id);
-            console.log(filterData);
+            const data = dataId[id]
+            // console.log(data);
+
+            formContainerHero.innerHTML+=`
+            <div data-id ="${data.id}" class="hero">
+   
+                   <div class="hero-box">
+                       <p> ${data.postedAt}<span>.${data.contract}</span></p>
+                       <h3 class="showDetail">${data.position}</h3>
+                       <h4>${data.company}</h4>
+                       <h6>${data.location}</h6>
+                   </div>
+                   <img src="${data.logo}" alt="">
+
+           </div>
+`
+
+
     
         } )
         
