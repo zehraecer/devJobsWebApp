@@ -33,24 +33,31 @@ async function getData(){
 
 
 
+
+
+
+
+
 async function showDetail(){
     const details = document.querySelectorAll(".showDetail")
     for (const detail of details) {
         detail.addEventListener("click",async function(){
             const id = this.parentElement.parentElement.dataset.id
-            const data = await getFetch()
-
-            const x = data.findIndex((detay)=>Number(detay.id)===Number(this.parentElement.parentElement.dataset.id))
-            console.log(data.x);
-
+            console.log(id);
+            const dataId = await getFetch()
+            console.log(dataId[id]);
+            // for (const dataid of dataId) {
+            //     console.log(dataid);
+            // }
+            console.log(dataId[0].id);
+            const filterData = dataId.find(data => data.id === id);
+            console.log(filterData);
     
         } )
         
         
     }
 }
-
-
 
 
 
