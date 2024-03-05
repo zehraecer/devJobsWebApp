@@ -4,6 +4,15 @@ const searchForm = document.querySelector(".searchForm")
 const checkbox = document.querySelector("#checkbox")
 
 
+// const homePage = document.querySelector(".btn-HomePage")
+
+
+// homePage.addEventListener("click", async function(){
+//     console.log("lkfngdf");
+//     return await getData()
+// })
+
+
 async function getFetch(){
     const response = await fetch("assets/json/data.json")
     const data = await response.json();
@@ -106,6 +115,24 @@ async function showDetail(){
 
 
     
+        const requirementsList = document.querySelector(".requirements-list")
+        const roleList = document.querySelector(".role-list")
+        for (const item of data.requirements.items) {
+                console.log(item);
+                requirementsList.innerHTML+=`
+                        <li>${item}</li>
+                    `
+
+         }
+
+         for (const item of data.role.items) {
+            console.log(item);
+            roleList.innerHTML+=`
+                    <li>${item}</li>
+                `
+
+     }
+
         } )
         
         
@@ -113,10 +140,15 @@ async function showDetail(){
 }
 
 
+// function detailBinds(){
 
 
 
-console.log(checkbox);
+// }
+
+
+
+
 
 
 searchForm.addEventListener("submit",handleSearchForm)
