@@ -1,6 +1,7 @@
 const heroContainer = document.querySelector(".hero-container")
-
 const formContainerHero = document.querySelector(".form-container-hero")
+const searchForm = document.querySelector(".searchForm")
+const checkbox = document.querySelector("#checkbox")
 
 
 async function getFetch(){
@@ -38,8 +39,6 @@ async function getData(){
 
 
 
-
-
 async function showDetail(){
     const details = document.querySelectorAll(".showDetail")
     for (const detail of details) {
@@ -48,21 +47,61 @@ async function showDetail(){
             const id = this.parentElement.parentElement.dataset.id
             // console.log(id);
             const dataId = await getFetch()
-            const data = dataId[id]
-            // console.log(data);
+            const data = dataId[id-1]
+            console.log(data);
 
             formContainerHero.innerHTML+=`
-            <div data-id ="${data.id}" class="hero">
-   
-                   <div class="hero-box">
-                       <p> ${data.postedAt}<span>.${data.contract}</span></p>
-                       <h3 class="showDetail">${data.position}</h3>
-                       <h4>${data.company}</h4>
-                       <h6>${data.location}</h6>
-                   </div>
-                   <img src="${data.logo}" alt="">
-
+            <!--"header-detail start -->
+           <div class="header-detail">
+               <img src="${data.logo}" alt="">
+               <div class="name">
+                   <h3>${data.company}</h3>
+                   <h6>${data.company}.com</h6>
+               </div>
+               <a href="${data.website}">Company Site</a>
+               
            </div>
+            <!--"header-detail end -->
+     
+            <!--"container-detail start -->
+
+           <div class="container-detail">
+
+                           <div class="container-detail-first">
+
+                                       <div class="container-detail-left">
+                                           <p>${data.postedAt}  <span>. ${data.contract}</span></p>
+                                           <h3>${data.position}</h3>
+                                           <h6>${data.location}</h6>
+                                       </div>
+
+                                       <div class="container-detail-right">
+                                           <a href="${data.apply}" class="btn btn-apply">Apply Now</a>
+                                       </div>
+
+                           </div>
+
+                           <p>${data.description}</p>
+                           
+                           <h2>Requirements</h2>
+
+                           <p>${data.requirements.content}</p>
+                   
+
+                           <ul class="requirements-list">
+                              
+                           </ul>
+
+                           <h2 class="what">What You Will Do</h2>
+                           <p>${data.role.content}</p>
+
+
+                           <ol class="role-list">
+                               
+                           </ol>
+           </div>
+           <!--"container-detail end -->
+
 `
 
 
@@ -76,8 +115,7 @@ async function showDetail(){
 
 
 
-const searchForm = document.querySelector(".searchForm")
-const checkbox = document.querySelector("#checkbox")
+
 console.log(checkbox);
 
 
