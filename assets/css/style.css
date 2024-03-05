@@ -216,9 +216,7 @@ input[type="text"]:focus{
     border: none;
 }
 
-.deneme{
-    background-color: #19202D;
-}
+
 
 .showDetail{
     cursor: pointer;
@@ -227,18 +225,21 @@ input[type="text"]:focus{
 /* detail sayfasi */
 
 
-.form-container-hero{
+
+/* 
+ .form-container-HomePage{
     margin-inline: auto;
     max-width: 730px;
     margin-top: 44px;
 
-}
+} */
 
 
 .header-detail{
     display:flex ;
     background-color: #fff;
     border-radius: 15px;
+    margin-top: 44px;
 
     img{
         width: 140px;
@@ -267,8 +268,7 @@ input[type="text"]:focus{
         background-color: #f0f2f5;
         color: #5964E0;
         text-align: center;
-        margin-left: 282px;
-        margin-top: 46px;
+        margin: 46px 0px 0px 582px;
         padding-top: 12px;
         border-radius: 5px;
         font-size: 16px;
@@ -288,8 +288,10 @@ input[type="text"]:focus{
 
 .container-detail{
     margin-top: 32px;
-    padding:48px 48px 48px 48px ;
+    padding:77px 100px 78px 92px ;
     background-color: #fff;
+    border-radius: 6px;
+
 
     p{
         font-size: 16px;
@@ -366,7 +368,7 @@ input[type="text"]:focus{
     width: 100%;
     background-color: #fff;
     display: flex;
-    gap: 348px;
+    gap: 548px;
     justify-content: center;
     margin-top: 80px;
     padding: 23px 0px 23px 0px;
@@ -388,6 +390,51 @@ input[type="text"]:focus{
     }
 }
 .detail-footer-left{
-    margin: 0px 0px 0px 0px;
+   border-radius: 6px;
 
+}
+
+/* DARK MODE CSS KODLARI */
+
+.darkmode{
+    background-color: #121721;
+
+
+    .searchForm{
+        background-color: #19202D;
+
+        h5{
+            color: #fff;
+        }
+    }
+    h3{
+        color: #fff;
+    }
+
+    .hero-box{
+        background-color: #19202D;
+    }
+
+    input[type="text"]{
+        opacity: 90%;
+        color: #fff;
+        background-color:#19202D;
+    }
+
+    .header-detail , .container-detail , .detail-footer{
+        background-color:#19202D ;
+
+        h2{
+            color: #fff;
+        }
+    }
+}
+
+
+
+.showDetail:active{
+    opacity: 50%;
+}
+.btn:active{
+    background-color: #969ef8;
 }

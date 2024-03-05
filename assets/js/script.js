@@ -2,6 +2,7 @@ const heroContainer = document.querySelector(".hero-container")
 const formContainerHero = document.querySelector(".form-container-hero")
 const searchForm = document.querySelector(".searchForm")
 const checkbox = document.querySelector("#checkbox")
+const detailFooter = document.querySelector(".detail-footer")
 
 
 // const homePage = document.querySelector(".btn-HomePage")
@@ -110,6 +111,17 @@ async function showDetail(){
                            </ol>
            </div>
            <!--"container-detail end -->
+
+           <div class="detail-footer">
+        
+                    <div class="detail-footer-left">
+                        <h3>${data.position}</h3>
+                        <p>So Digital Inc.</p>
+                    </div>
+            
+                    <a href="https://example.com/scoot/apply" class="btn btn-apply">Apply Now</a>
+                  
+                </div>         
 
 `
 
@@ -222,12 +234,19 @@ async function getSearch(filterData){
 
 
 
-const darkMode = document.querySelector(".mode")
+const darkMode = document.querySelector("#myRange")
 const body= document.querySelector("body");
 
 darkMode.addEventListener("click", function(){
-    body.classList.add("deneme")
-    console.log("ıurghdıfg");
+
+    if(darkMode.value== "1"){
+        body.classList.add("darkmode")
+
+    }
+    if(darkMode.value== "2"){
+        body.classList.remove("darkmode")
+    }
+
 })
 
 
