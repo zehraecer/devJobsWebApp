@@ -14,11 +14,11 @@ async function getData(){
 
     for (const data of response) {
         heroContainer.innerHTML+=`
-                         <div class="hero">
+                         <div data-id ="${data.id}" class="hero">
                 
                                 <div class="hero-box">
                                     <p> ${data.postedAt}<span>.${data.contract}</span></p>
-                                    <h3>${data.position}</h3>
+                                    <h3 class="showDetail">${data.position}</h3>
                                     <h4>${data.company}</h4>
                                     <h6>${data.location}</h6>
                                 </div>
@@ -27,10 +27,30 @@ async function getData(){
                         </div>
         `
     }
+    showDetail()
     
 }
 
-getData();
+
+
+function showDetail(){
+    const details = document.querySelectorAll(".showDetail")
+
+    for (const detail of details) {
+        detail.addEventListener("click",function(){
+            const id = this.parentElement.parentElement.dataset.id
+            console.log(id);
+
+    
+        } )
+        
+        
+    }
+}
+
+
+
+
 
 
 const searchForm = document.querySelector(".searchForm")
@@ -39,6 +59,7 @@ console.log(checkbox);
 
 
 searchForm.addEventListener("submit",handleSearchForm)
+
 
 
 async function handleSearchForm(e){
@@ -57,7 +78,6 @@ async function handleSearchForm(e){
 
     
 }
-
 
 
 
@@ -107,6 +127,8 @@ async function getSearch(filterData){
 
 // dark mode js kodlari
 
+
+
 const darkMode = document.querySelector(".mode")
 const body= document.querySelector("body");
 
@@ -114,3 +136,9 @@ darkMode.addEventListener("click", function(){
     body.classList.add("deneme")
     console.log("ıurghdıfg");
 })
+
+
+
+
+
+getData();

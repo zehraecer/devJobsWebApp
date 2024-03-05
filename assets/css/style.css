@@ -219,3 +219,7 @@ input[type="text"]:focus{
 .deneme{
     background-color: #19202D;
 }
+
+.showDetail{
+    cursor: pointer;
+}
