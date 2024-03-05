@@ -152,14 +152,6 @@ async function showDetail(){
 }
 
 
-// function detailBinds(){
-
-
-
-// }
-
-
-
 
 
 
