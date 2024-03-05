@@ -33,13 +33,15 @@ async function getData(){
 
 
 
-function showDetail(){
+async function showDetail(){
     const details = document.querySelectorAll(".showDetail")
-
     for (const detail of details) {
-        detail.addEventListener("click",function(){
+        detail.addEventListener("click",async function(){
             const id = this.parentElement.parentElement.dataset.id
-            console.log(id);
+            const data = await getFetch()
+
+            const x = data.findIndex((detay)=>Number(detay.id)===Number(this.parentElement.parentElement.dataset.id))
+            console.log(data.x);
 
     
         } )
