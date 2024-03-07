@@ -1,7 +1,5 @@
 const heroContainer = document.querySelector(".hero-container")
 const formContainerHero = document.querySelector(".form-container-hero")
-const searchForm = document.querySelector(".searchForm")
-const checkbox = document.querySelector("#checkbox")
 const detailFooter = document.querySelector(".detail-footer")
 
 
@@ -152,14 +150,28 @@ async function showDetail(){
 }
 
 
+const checkbox = document.querySelector("#checkbox");
+
+checkbox.addEventListener("click",async function(){
+    let isTrue = checkbox.checked
+    // console.log(isTrue);
+
+     await handleSearchForm()
+
+})
 
 
 
+// console.log(checkbox.checked);
+
+const searchForm = document.querySelector(".searchForm")
 searchForm.addEventListener("submit",handleSearchForm)
 
 
 
+
 async function handleSearchForm(e){
+    if(e)
     e.preventDefault()
     console.log("jsdbfdjgb");
     const searchValuePosition = searchForm["search"].value
@@ -171,16 +183,20 @@ async function handleSearchForm(e){
         console.log(alldatalocation);
         return alldatalocation && alldataposition
     })
-    return getSearch(filterData)
+
+    const isTrue = checkbox.checked
+    console.log(isTrue);
+    return await getSearch(filterData,isTrue)
 
     
 }
 
 
 
-async function getSearch(filterData){
+
+async function getSearch(filterData,isTrue){
     heroContainer.innerHTML=""
-    if(checkbox.checked && filterData[0].contract === "Full Time"){
+    if(isTrue && filterData[0].contract === "Full Time"){
         console.log(filterData[0].contract);     
         for (const data of filterData) {
             heroContainer.innerHTML+=`
@@ -199,23 +215,24 @@ async function getSearch(filterData){
         }
 
     }
-    else{
-        for (const data of filterData) {
-            heroContainer.innerHTML+=`
-            <div class="hero">
+    // else{
+    //     for (const data of filterData) {
+    //         heroContainer.innerHTML+=`
+    //         <div class="hero">
                     
-                                    <div class="hero-box">
-                                        <p> ${data.postedAt}<span>.${data.contract}</span></p>
-                                        <h3>${data.position}</h3>
-                                        <h4>${data.company}</h4>
-                                        <h6>${data.location}</h6>
-                                    </div>
-                                    <img src="${data.logo}" alt="">
+    //                                 <div class="hero-box">
+    //                                     <p> ${data.postedAt}<span>.${data.contract}</span></p>
+    //                                     <h3>${data.position}</h3>
+    //                                     <h4>${data.company}</h4>
+    //                                     <h6>${data.location}</h6>
+    //                                 </div>
+    //                                 <img src="${data.logo}" alt="">
     
-                            </div>
-            `
-        }
-    }   
+    //                         </div>
+    //         `
+    //     }
+    // }  
+    
 }
     
 
@@ -235,7 +252,7 @@ darkMode.addEventListener("click", function(){
         body.classList.add("darkmode")
 
     }
-    if(darkMode.value== "2"){
+    else{
         body.classList.remove("darkmode")
     }
 
