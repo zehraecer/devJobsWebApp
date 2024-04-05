@@ -1,46 +1,56 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
     display: block;
     max-width: 100%;
 }
-a{text-decoration: none;}
 
-body{
+a {
+    text-decoration: none;
+}
+
+body {
     background-color: #F4F6F8;
     background-image: url("../img/background-image.png");
     background-repeat: no-repeat;
-    background-size:100% auto;
+    background-size: 100% auto;
     /* background-position: center; */
     font-family: Kumbh Sans;
 
-    
+
 }
 
 
-.container{
+.container {
     max-width: 1110px;
     margin-inline: auto;
 }
-.header{
+
+.header {
     margin-top: 45px;
     display: flex;
     justify-content: space-between;
 }
-.modes{
+
+.modes {
     display: flex;
     gap: 16px;
 }
-input[type="range"]{
+
+input[type="range"] {
     width: 48px;
     height: 24px;
-    appearance: none; 
+    appearance: none;
     border-radius: 13px;
-    background-color:#fff;
+    background-color: #fff;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -49,13 +59,14 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 14px;
-    height: 14px; 
+    height: 14px;
     border-radius: 50%;
     cursor: pointer;
-    background:#5964E0;
+    background: #5964E0;
 
 }
-input[type="text"]{
+
+input[type="text"] {
     border: none;
     width: 271px;
     font-size: 16px;
@@ -64,14 +75,15 @@ input[type="text"]{
     letter-spacing: 0px;
     color: #19202D;
     opacity: 50%;
-        
-  }
 
-input[type="text"]:focus{
+}
+
+input[type="text"]:focus {
     outline: none;
 }
-.searchForm{
-      
+
+.searchForm {
+
     margin-top: 44px;
     display: flex;
     justify-content: space-between;
@@ -80,34 +92,38 @@ input[type="text"]:focus{
     border-radius: 6px;
 
 
-    div{
+    div {
         display: flex;
         gap: 16px;
         padding-top: 28px;
         padding-bottom: 28px;
     }
 }
-.searchFormleft{
+
+.searchFormleft {
     margin-left: 32px;
 
-    img{
+    img {
         width: 24px;
         height: 24px;
         margin-top: 15px;
     }
 }
-.searchFormMiddle{
+
+.searchFormMiddle {
     padding-left: 23px;
     border-right: 1px solid rgba(110, 128, 152, 0.3);
     border-left: 1px solid rgba(110, 128, 152, 0.3);
-    img{
+
+    img {
         width: 17px;
         height: 24px;
         margin-top: 14px;
     }
 
 }
-.btn{
+
+.btn {
     padding: 16px 36px;
     color: #fff;
     background-color: #5964E0;
@@ -122,15 +138,17 @@ input[type="text"]:focus{
 
 
 }
-.searchFormRight{
-    
 
-    input{
+.searchFormRight {
+
+
+    input {
         width: 24px;
         height: 24px;
         margin-top: 15px;
     }
-    h5{
+
+    h5 {
         margin-top: 17px;
         font-size: 16px;
         font-weight: 700;
@@ -142,73 +160,76 @@ input[type="text"]:focus{
 }
 
 
-.hero-container{
+.hero-container {
     margin-top: 105px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
 
-.hero{
+.hero {
     margin-top: 65px;
     position: relative;
 
-    img{
+    img {
         position: absolute;
         bottom: 220px;
         left: 32px;
     }
 }
-.hero-box{
-    max-width:350px;
+
+.hero-box {
+    max-width: 350px;
     padding: 49px 32px 32px 32px;
     background-color: #fff;
     border-radius: 6px;
 
 
-    
-        p{
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            letter-spacing: 0px;
-            text-align: left;
-            color: #6E8098;
 
-        }
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #6E8098;
 
-        h3{
-            width: 350px;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 25px;
-            letter-spacing: 0px;
-            text-align: left;
-            margin-top: 13px;
-        }
-        h4{
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            letter-spacing: 0px;
-            text-align: left;
-            margin-top: 14px;
-            color: #6E8098;
+    }
 
-        }
-        h6{
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 17px;
-            letter-spacing: 0px;
-            text-align: left;
-            margin-top: 44px;
-            color: #5964E0;
-        }
+    h3 {
+        width: 350px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: 13px;
+    }
+
+    h4 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: 14px;
+        color: #6E8098;
+
+    }
+
+    h6 {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0px;
+        text-align: left;
+        margin-top: 44px;
+        color: #5964E0;
+    }
 }
 
-.btn-loadMore{
+.btn-loadMore {
     margin-inline: auto;
     margin-top: 56px;
     display: flex;
@@ -218,7 +239,7 @@ input[type="text"]:focus{
 
 
 
-.showDetail{
+.showDetail {
     cursor: pointer;
 }
 
@@ -235,36 +256,38 @@ input[type="text"]:focus{
 } */
 
 
-.header-detail{
-    display:flex ;
+.header-detail {
+    display: flex;
     background-color: #fff;
     border-radius: 15px;
     margin-top: 44px;
 
-    img{
+    img {
         width: 140px;
         height: 140px;
         border-radius: 0;
     }
-    h3{
+
+    h3 {
         font-size: 24px;
         font-weight: 700;
         line-height: 30px;
         margin-bottom: 13px;
 
     }
-    h6{
+
+    h6 {
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
         color: #6E8098;
 
     }
-    
 
-    a{
+
+    a {
         width: 147px;
-        height: 48px; 
+        height: 48px;
         background-color: #f0f2f5;
         color: #5964E0;
         text-align: center;
@@ -278,66 +301,66 @@ input[type="text"]:focus{
     }
 }
 
-.name{
+.name {
     margin: 42px 0px 0px 40px
 }
-.btn-apply{
+
+.btn-apply {
     display: inline-block;
     margin-top: 20px;
 }
 
-.container-detail{
+.container-detail {
     margin-top: 32px;
-    padding:77px 100px 78px 92px ;
+    padding: 77px 100px 78px 92px;
     background-color: #fff;
     border-radius: 6px;
 
 
-    p{
+    p {
         font-size: 16px;
         font-weight: 400;
         line-height: 26px;
         letter-spacing: 0px;
         text-align: left;
-        color:#6E8098;
+        color: #6E8098;
 
     }
 
-    h2{
+    h2 {
         margin-top: 40px;
         margin-bottom: 28px;
     }
 
-    ul{
+    ul {
         margin-top: 24px;
         padding-left: 13px;
         margin-bottom: 48px;
 
     }
-    
-    li{
-        margin-top:8px;
+
+    li {
+        margin-top: 8px;
         padding-left: 32px;
         font-size: 16px;
         font-weight: 400;
         line-height: 26px;
         color: #6E8098;
-     }
+    }
 
-     ol{
+    ol {
         padding-left: 13px;
         margin-top: 24px
-
-     }
+    }
 }
 
-.container-detail-first{
+.container-detail-first {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 
 
-    p{
+    p {
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -346,7 +369,8 @@ input[type="text"]:focus{
         margin-bottom: 8px;
 
     }
-    h3{
+
+    h3 {
         font-size: 28px;
         font-weight: 700;
         line-height: 35px;
@@ -355,7 +379,7 @@ input[type="text"]:focus{
 
     }
 
-    h6{
+    h6 {
         font-size: 14px;
         font-weight: 700;
         line-height: 17px;
@@ -364,7 +388,7 @@ input[type="text"]:focus{
     }
 }
 
-.detail-footer{
+.detail-footer {
     width: 100%;
     background-color: #fff;
     display: flex;
@@ -373,14 +397,14 @@ input[type="text"]:focus{
     margin-top: 80px;
     padding: 23px 0px 23px 0px;
 
-    h3{
+    h3 {
         font-size: 20px;
         font-weight: 700;
         line-height: 25px;
         margin-bottom: 12px;
     }
 
-    p{
+    p {
         font-size: 16px;
         font-weight: 400;
         line-height: 20px;
@@ -389,42 +413,50 @@ input[type="text"]:focus{
 
     }
 }
-.detail-footer-left{
-   border-radius: 6px;
 
+.detail-footer-left {
+    border-radius: 6px;
+
+}
+
+.myPage {
+    cursor: pointer;
 }
 
 /* DARK MODE CSS KODLARI */
 
-.darkmode{
+.darkmode {
     background-color: #121721;
 
 
-    .searchForm{
+    .searchForm {
         background-color: #19202D;
 
-        h5{
+        h5 {
             color: #fff;
         }
     }
-    h3{
+
+    h3 {
         color: #fff;
     }
 
-    .hero-box{
+    .hero-box {
         background-color: #19202D;
     }
 
-    input[type="text"]{
+    input[type="text"] {
         opacity: 90%;
         color: #fff;
-        background-color:#19202D;
+        background-color: #19202D;
     }
 
-    .header-detail , .container-detail , .detail-footer{
-        background-color:#19202D ;
+    .header-detail,
+    .container-detail,
+    .detail-footer {
+        background-color: #19202D;
 
-        h2{
+        h2 {
             color: #fff;
         }
     }
@@ -432,9 +464,10 @@ input[type="text"]:focus{
 
 
 
-.showDetail:active{
+.showDetail:active {
     opacity: 50%;
 }
-.btn:active{
+
+.btn:active {
     background-color: #969ef8;
 }
