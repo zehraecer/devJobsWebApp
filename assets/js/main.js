@@ -14,5 +14,27 @@ console.log(x * y);
 function example() {
     return 5;
 }
-
 console.log(typeof example);
+
+const map = new Map()
+
+map.set("isim", "ahsen")
+map.set("yas", 4)
+map.delete("isim")
+
+console.log(map.get("isim"));
+console.log(map.get("yas"));
+
+const now = new Date();
+console.log(now);
+
+console.log(now.getFullYear());
+console.log(now.getMonth());
+console.log(now.getDate());
+console.log(now.getHours());
+console.log(now.getMinutes());
+console.log(now.getSeconds());
+
+
+
+
