@@ -11,16 +11,12 @@ mypage.addEventListener("click", function () {
     return getData()
 })
 
-
-
 async function getFetch() {
     const response = await fetch("assets/json/data.json")
     const data = await response.json();
     // console.log(data);
     return data
 }
-
-
 async function getData() {
     const response = await getFetch()
 
@@ -42,11 +38,6 @@ async function getData() {
     showDetail()
 
 }
-
-
-
-
-
 
 async function showDetail() {
     const details = document.querySelectorAll(".showDetail")
@@ -150,13 +141,7 @@ async function showDetail() {
     }
 }
 
-
-
-
-
 searchForm.addEventListener("submit", handleSearchForm)
-
-
 
 async function handleSearchForm(e) {
     e.preventDefault()
@@ -173,14 +158,8 @@ async function handleSearchForm(e) {
     return await getSearch(filterData)
 
 
+
 }
-
-
-// checkbox.checked = true;
-
-
-//for of kullan
-
 
 async function getSearch(filterData) {
     heroContainer.innerHTML = ""
@@ -208,6 +187,7 @@ async function getSearch(filterData) {
 
 
         }
+
     }
     else {
 
@@ -227,18 +207,12 @@ async function getSearch(filterData) {
                             </div>
             `
         }
+
     }
 
 }
-
-
-
 // console.log(filterData);
-
-
 // dark mode js kodlari
-
-
 
 const darkMode = document.querySelector("#myRange")
 const body = document.querySelector("body");
